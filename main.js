@@ -4,10 +4,8 @@ let nombre = document.getElementById("div-input_nombre");
 nombre.addEventListener('keypress', (Event) =>{
     Event.preventDefault()
     let codigoKey = Event.key;
-    
-    let validacion = parseInt(codigoKey)
-        
-    if(!validacion || codigoKey=="0"){
+       
+    if(!isFinite(codigoKey)){
         nombre.value += codigoKey;
     }
    
